@@ -1,1 +1,3 @@
-<p>employee-list-container works!</p>
+<!-- <p>employee-list-container works!</p> -->
+
+<app-employee-list-presentation [employeeList]="employeeList$ | async" (deleteId)="onDeleteId($event)"></app-employee-list-presentation>

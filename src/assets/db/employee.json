@@ -1,0 +1,20 @@
+{
+  "employees": [
+    {
+      "fullname": "Pratik Tandel",
+      "email": "pratiktandel@gmail.com",
+      "mobile": 7096709395,
+      "city": "Valsad",
+      "department": "Developer",
+      "id": 1
+    },
+    {
+      "fullname": "Pratik Tandel",
+      "email": "pratiktandel@gmail.com",
+      "mobile": 7096709395,
+      "city": "Valsad",
+      "department": "Developer",
+      "id": 2
+    }
+  ]
+}
