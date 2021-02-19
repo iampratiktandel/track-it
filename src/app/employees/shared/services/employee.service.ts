@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { FormGroup } from "@angular/forms";
 import { Observable } from "rxjs";
 import { Employee } from "../models/employee.model";
 
@@ -25,5 +26,12 @@ export class EmployeeService {
         error => console.log('Error', error)
       );
     }
+  }
+
+  public addEmployee(employeeForm: FormGroup) {
+    this.http.post(`${this.url}/employees`, employeeForm).subscribe(
+      data => console.log('POST Request is successful ', data),
+        error => console.log('Error', error)
+    );
   }
 }

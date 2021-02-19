@@ -1,0 +1,31 @@
+<div class="container p-3">  
+  <form class="col-lg-6 mx-auto" [formGroup]="employeeForm" (ngSubmit)="employeeDetails()">
+    <div class="mb-3">
+      <label>Full Name</label> 
+      <input type="text" id="name" class="form-control" formControlName="fullname">
+    </div>
+
+    <div class="mb-3">
+      <label>Email</label>
+      <input type="email" class="form-control" formControlName="email">
+    </div>
+
+    <div class="mb-3">
+      <label>Mobile</label>
+      <input type="number" class="form-control" formControlName="mobile">
+    </div>
+    
+    <div class="mb-3">
+      <label>City</label>
+      <input type="text" class="form-control" formControlName="city">
+    </div>
+
+    <div class="mb-3">
+      <label>Department</label>
+      <input type="text" class="form-control" formControlName="department">
+    </div>
+    
+    <!-- <button type="submit" class="btn btn-primary" [disabled]="studentForm.valid">Submit</button> -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
