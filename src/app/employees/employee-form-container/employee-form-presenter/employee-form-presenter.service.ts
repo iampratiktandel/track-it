@@ -1,5 +1,5 @@
 // import { Injectable } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Subject, Observable } from 'rxjs';
 import { Employee } from '../../shared/models/employee.model';
 
@@ -19,10 +19,12 @@ export class EmployeeFormPresenterService {
   public bindForm(): FormGroup {
     return new FormGroup({
       fullname: new FormControl(),
+      gender: new FormControl(),
       email: new FormControl(),
       mobile: new FormControl(),
       city: new FormControl(),
-      department: new FormControl()
+      department: new FormControl(),
+      hireDate: new FormControl()
     })
   }
 

@@ -24,11 +24,20 @@
       "gender": "female",
       "email": "devu@gmail.com",
       "mobile": 9684843241,
-      "city": "Bein",
-      "department": "Developer",
+      "city": "Valsad",
+      "department": "Software Engineer",
       "hireDate": "2021-03-20",
       "id": 3
+    },
+    {
+      "fullname": "Devanshi",
+      "gender": "female",
+      "email": "devu@gmail.com",
+      "mobile": 9684843241,
+      "city": "Valsad",
+      "department": "Software Engineer",
+      "hireDate": "2021-03-20",
+      "id": 4
     }
   ]
-
 }

@@ -21,17 +21,30 @@ export class EmployeeService {
   public deleteEmployee(id: number) {
     if (confirm('Are you sure?')) {
       this.http.delete<Employee>(`${this.url}/employees/${id}`)
-      .subscribe(
-        data => console.log('Delete Request is successful ', data),
-        error => console.log('Error', error)
-      );
+        .subscribe(
+          data => console.log('Delete Request is successful ', data),
+          error => console.log('Error', error)
+        );
     }
   }
 
   public addEmployee(employeeForm: FormGroup) {
     this.http.post(`${this.url}/employees`, employeeForm).subscribe(
       data => console.log('POST Request is successful ', data),
-        error => console.log('Error', error)
+      error => console.log('Error', error)
     );
+  }
+
+  public editEmployee(employeeForm: FormGroup, id: string|null) {
+    this.http.put(`${this.url}/employees/${id}`,employeeForm).subscribe(
+      res => {
+        res
+        console.log(res);
+      } 
+    );
+  }
+
+  public getEmployeeById(id: number): Observable<Employee> {
+    return this.http.get(`${this.url}/employees/${id}`) as Observable<Employee>;
   }
 }

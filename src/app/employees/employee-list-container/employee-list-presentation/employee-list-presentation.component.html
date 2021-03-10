@@ -22,12 +22,14 @@
         <tbody>
           <tr *ngFor="let employeeListItem of employeeList">
             <td>{{employeeListItem.fullname}}</td>
+
+            
             <td>{{employeeListItem.email}}</td>
             <td>{{employeeListItem.mobile}}</td>
             <td>{{employeeListItem.city}}</td>
             <td>{{employeeListItem.department}}</td>
             <td>
-              <button class="mx-2 btn btn-secondary">Edit</button>
+              <button class="mx-2 btn btn-secondary" [routerLink]="['edit',employeeListItem.id]">Edit</button>
               <button class="btn btn-danger" (click)="deleteEmployee(employeeListItem.id)">Delete</button>
             </td>
           </tr>

@@ -2,7 +2,27 @@
   <form class="col-lg-6 mx-auto" [formGroup]="employeeForm" (ngSubmit)="employeeDetails()">
     <div class="mb-3">
       <label>Full Name</label> 
-      <input type="text" id="name" class="form-control" formControlName="fullname">
+      <input type="text" class="form-control" formControlName="fullname">
+    </div>
+
+    <div class="mb-3">
+      <div>
+        <input class="form-check-input" type="radio" name="gender" value="male" formControlName="gender" checked>
+        <label class="form-check-label mx-2">
+          Male
+        </label>
+
+        <input class="form-check-input" type="radio" name="gender" value="female" formControlName="gender">
+        <label class="form-check-label mx-2">
+          Female
+        </label>
+
+        <input class="form-check-input" type="radio" name="gender" value="other" formControlName="gender">
+        <label class="form-check-label mx-2">
+          Other
+        </label>
+      </div>
+        
     </div>
 
     <div class="mb-3">
@@ -22,10 +42,20 @@
 
     <div class="mb-3">
       <label>Department</label>
-      <input type="text" class="form-control" formControlName="department">
+      <select class="form-select" formControlName="department">
+        <option value="Developer">Developer</option>
+        <option value="Accountant">Accountant</option>
+        <option value="Software Engineer">Software Engineer</option>
+      </select>
     </div>
     
+    <div class="mb-3">
+      <label>Hire Date</label>
+      <input type="date" class="form-control" formControlName="hireDate">
+    </div>
     <!-- <button type="submit" class="btn btn-primary" [disabled]="studentForm.valid">Submit</button> -->
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <!-- <button type="submit" class="btn btn-primary" >Submit</button> -->
+    <button type="submit" class="btn btn-primary" [disabled]="!employeeForm.valid">{{canEdit ? 'Edit' : 'Add'}}</button>
+    <!-- <button class="btn btn-primary">Edit</button> -->
   </form>
 </div>
