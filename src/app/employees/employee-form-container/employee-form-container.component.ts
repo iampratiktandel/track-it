@@ -33,7 +33,6 @@ export class EmployeeFormContainerComponent implements OnInit {
   }
 
   public onAddEmployee(employeeForm: FormGroup) {
-    this.employeeService.addEmployee(employeeForm);
     if(!this.canEdit) {
       // this.employeeModel = employeeForm;
       this.employeeService.addEmployee(employeeForm)

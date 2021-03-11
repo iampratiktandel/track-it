@@ -19,6 +19,7 @@ export class EmployeeFormPresentationComponent implements OnInit {
       this._employee = value;
       console.log('Setter', value);
       this.setEmployeeDetails(value as Employee);
+      this.canEdit = true;
     }
   }
   get employee(): Employee | null {
@@ -42,7 +43,6 @@ export class EmployeeFormPresentationComponent implements OnInit {
 
   public employeeDetails() {
     console.log(this.employeeForm.value);
-    debugger
     this.employeeFormPresenterService.employeeDetails(this.employeeForm);
   }
 

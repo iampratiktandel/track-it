@@ -7,37 +7,18 @@
       "mobile": 7096709395,
       "city": "Valsad",
       "department": "Developer",
+      "hireDate": "2021-03-27",
       "id": 1
     },
     {
-      "fullname": "Umang",
+      "fullname": "Umang Tandel",
       "gender": "male",
       "email": "umang@gmail.com",
-      "mobile": 9482939231,
+      "mobile": 9878594923,
       "city": "Valsad",
       "department": "Developer",
-      "hireDate": null,
+      "hireDate": "2021-03-23",
       "id": 2
-    },
-    {
-      "fullname": "Devanshi",
-      "gender": "female",
-      "email": "devu@gmail.com",
-      "mobile": 9684843241,
-      "city": "Valsad",
-      "department": "Software Engineer",
-      "hireDate": "2021-03-20",
-      "id": 3
-    },
-    {
-      "fullname": "Devanshi",
-      "gender": "female",
-      "email": "devu@gmail.com",
-      "mobile": 9684843241,
-      "city": "Valsad",
-      "department": "Software Engineer",
-      "hireDate": "2021-03-20",
-      "id": 4
     }
   ]
 }
